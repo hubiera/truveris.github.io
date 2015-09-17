@@ -1,0 +1,83 @@
+<%inherit file="/base.mako"/>
+
+<%def name="title()">we're hiring - truveris.github.com</%def>
+<%def name="description()">Open positions within the Truveris Engineering team</%def>
+
+<section class="main" itemscope itemtype="http://schema.org/CollectionPage" role="main">
+    <meta content='Truveris Jobs' itemprop='name'>
+
+    <article>
+
+        <!-- Article header -->
+        <header>
+			<figure>
+				 <img src="/lib/img/scientist.svg" alt="Truveris is hiring" class="roundimg">
+			</figure>
+            <h1 itemprop="name headline" role="heading">We're hiring in NYC!</h1>
+        </header>
+
+        <p>
+            We're growing fast and have a ton of interesting problems to solve. If
+            you feel like reducing the cost of healthcare for Americans and any
+            of the following qualifiers apply to you, please reach out:
+        </p>
+
+        <ul>
+            <li>Unix/Linux hacker</li>
+            <li>Data nerd</li>
+            <li>Byte artist</li>
+        </ul>
+
+        <p>
+            The following text contains our email, figure out the codec and
+            send us your portfolio, github, resume, code snippets or whatever
+            you think is relevant. This little trick is a good spam filter and
+            it shows you're not a complete idiot.
+        </p>
+
+		<div class="crypt-cont">
+			<div class="cryptmail">
+				aW1wb3J0IGNvZGVjcwpwcmludChjb<br>
+				2RlY3MuZGVjb2RlKHN0cigiciIuam<br>
+				9pbihbInEiLCAiaUBnZWhpIiwgImV<br>
+				2Zi5wYnoiXSkpLCAicm90MTMiKSkK
+			</div>
+		</div>
+
+        <p>
+            You can also find us on IRC, #truveris on
+            <a href="https://freenode.net/">Freenode</a>.
+        </p>
+
+    </article>
+
+##    % for job in jobs:
+##    <article itemscope itemtype="http://schema.org/JobPosting">
+##        <h2 itemprop="title">${job.title}</h2>
+##
+##        <span>
+##            <p>
+##                <strong>Location:</strong>
+##                <span itemprop="jobLocation" itemscope itemtype="http://schema.org/Place">
+##                    <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+##                        <span itemprop="addressLocality">New York</span>
+##                        <span itemprop="addressRegion">NY</span>
+##                    </span>
+##                </span>
+##            </p>
+##        </span>
+##
+##        <p itemprop="description">
+##            <strong>Description:</strong>
+##            <span itemprop="hiringOrganization" itemscope itemtype="http://schema.org/Organization">
+##                <span itemprop="name">Truveris Inc.</span>
+##            </span>
+##
+##            seeks a full-time senior-level software engineer to develop apps
+##            &amp; tools to lower the cost of healthcare for Americans.
+##        </p>
+##    </article>
+##    % endfor
+</section>
+
+## vim: ft=mako
